@@ -3,9 +3,7 @@ import org.junit.Test;
 import static junit.framework.TestCase.assertFalse;
 import static junit.framework.TestCase.assertTrue;
 
-/**
- * Created by sabbas on 5/19/17.
- */
+
 public class RulesTest {
 
 

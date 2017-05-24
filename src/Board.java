@@ -2,15 +2,6 @@ import java.util.ArrayList;
 
 public class Board {
 
-    public boolean isEqualTo(Board board2) {
-        if (coordinatesOfLivingCells.size() == 0) {
-            return true;
-        } else{
-            return false;
-        }
-    }
-
-
     public ArrayList<Point> coordinatesOfLivingCells = new ArrayList<>();
 
     public int numberOfLivingCells() {
@@ -31,5 +22,17 @@ public class Board {
             newBoard.bringToLife(coordinatesOfLivingCells.get(i));
         }
         return newBoard;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if( o == this){
+            return true;
+        }
+        if (! (o instanceof Board)){
+            return false;
+        }
+        Board b = (Board) o;
+        return this.coordinatesOfLivingCells.equals(b.coordinatesOfLivingCells);
     }
 }

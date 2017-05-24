@@ -7,7 +7,16 @@ public class Point {
         this.y = y;
     }
 
-    public boolean isEqualTo(Point p) {
+
+    @Override
+    public boolean equals(Object o){
+        if( o == this){
+            return true;
+        }
+        if (! (o instanceof Point)){
+            return false;
+        }
+        Point p = (Point) o;
         return this.x == p.x && this.y == p.y;
     }
 }
